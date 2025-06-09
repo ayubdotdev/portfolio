@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion'
-import { HoverEffect } from './ui/card-hover-effect';
+import { SiExpress, SiMongodb,SiJavascript, SiTailwindcss, 
+    SiTypescript, SiReact,SiNodedotjs,
+    SiNextdotjs,
+    } from 'react-icons/si'
 
 
 const SkillsSection = () => {
@@ -8,33 +11,37 @@ const SkillsSection = () => {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.3,
+                staggerChildren: 0.08,
+                delayChildren: 0.05,
             },
         },
     };
 
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+        hidden: { 
+            y: 20, 
+            opacity: 0,
+            filter: "blur(8px)"
+        },
         show: {
             y: 0,
             opacity: 1,
-            transition: { type: "spring", stiffness: 100 },
+            filter: "blur(0px)",
+            transition: { 
+                duration: 0.4,
+                ease: "easeOut"
+            },
         },
     };
     const skillsData = [
-        { name: "React", icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg", color: "#61DAFB" },
-        { name: "Next.js", icon: "https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png", color: "#000000" },
-        { name: "Vite", icon: "https://cdn.worldvectorlogo.com/logos/vitejs.svg", color: "#646CFF" },
-        { name: "Tailwind CSS", icon: "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg", color: "#38B2AC" },
-        { name: "Framer Motion", icon: "https://cdn.worldvectorlogo.com/logos/framer-motion.svg", color: "#0055FF" },
-        { name: "ShadCN UI", icon: "https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/favicon.ico", color: "#000000" },
-        { name: "TypeScript", icon: "https://cdn.worldvectorlogo.com/logos/typescript.svg", color: "#3178C6" },
-        { name: "JavaScript", icon: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg", color: "#F7DF1E" }, { name: "Node.js", icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg", color: "#339933" },
-        { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", color: "#000000" },
-        { name: "MongoDB", icon: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg", color: "#47A248" },
-        { name: "PostgreSQL", icon: "https://cdn.worldvectorlogo.com/logos/postgresql.svg", color: "#336791" },
-        
+        { name: "React", icon: SiReact , color: "#61DAFB" },
+        { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
+        { name: "Tailwind CSS", icon:SiTailwindcss, color: "#06b6d4" },
+        { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+        { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+         { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+        { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
+        { name: "MongoDB", icon: SiMongodb, color: "#47A248" }
     ];
 
     return (
@@ -46,10 +53,18 @@ const SkillsSection = () => {
                 viewport={{ once: true, margin: "-100px" }}
             >
                 <div className="text-center mb-12">
-                    <h1 className='text-3xl md:text-4xl font-bold inline-block'>
-                        Tech Stack
+                    <h1 className='text-3xl md:text-4xl font-bold inline-block mb-4'>
+                        Tech <span className='text-cyan-200'> Stack</span> 
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="w-45 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"
+                    />
                     </h1>
-                   
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+                        Technologies and tools I use to bring ideas to life and build amazing digital experiences.
+                    </p>
                 </div>
             </motion.div>
 
@@ -68,10 +83,9 @@ const SkillsSection = () => {
                         whileHover={{ y: -5, transition: { duration: 0.2 } }}
                     >
                         <div className="h-24 w-24 flex items-center justify-center mb-3">
-                            <img
-                                src={skill.icon}
-                                alt={skill.name}
+                            <skill.icon
                                 className='w-24 h-24 object-contain filter hover:brightness-110 transition-transform group-hover:scale-110'
+                                style={{ color: skill.color }}
                             />
                         </div>
                         <p className='text-lg font-medium text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>{skill.name}</p>

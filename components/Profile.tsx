@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { User } from "lucide-react";
 import TypingAnimation from "./Typing-animation";
-import { InteractiveHoverButton } from "@/src/components/magicui/interactive-hover-button";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 
 const ProfileSection = () => {
   const containerVariants = {
@@ -69,7 +69,7 @@ const ProfileSection = () => {
             variants={itemVariants}
             className="text-lg text-foreground/70 mb-8"
           >
-            "I'm a second-year engineering student with a strong passion for web development. I love building websites that improve digital experiences and solve real-world problems. I'm always experimenting with new tools and pushing my skills to the next level          </motion.p>
+            I'm a third-year engineering student with a strong passion for web development. I love building websites that improve digital experiences and solve real-world problems       </motion.p>
           <motion.div
             variants={itemVariants}
             className="flex flex-wrap justify-center md:justify-start gap-4"

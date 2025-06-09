@@ -53,7 +53,7 @@ export function NavbarDemo() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
 
