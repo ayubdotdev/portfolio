@@ -132,7 +132,7 @@ const Contacts = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div variants={itemVariants}>
-            <h3 className="text-2xl md:text-4xl font-bold dark:text-white text-black mb-6">
+            <h3 className="text-3xl md:text-5xl font-bold dark:text-white text-black mb-6">
               Open to Connect & Collaborate
             </h3>
           </motion.div>

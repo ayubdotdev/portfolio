@@ -53,15 +53,17 @@ const SkillsSection = () => {
                 viewport={{ once: true, margin: "-100px" }}
             >
                 <div className="text-center mb-12">
-                    <h1 className='text-3xl md:text-4xl font-bold inline-block mb-4'>
-                        Tech <span className='text-cyan-200'> Stack</span> 
-                    <motion.div
-                        initial={{ scaleX: 0 }}
-                        whileInView={{ scaleX: 1 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="w-45 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"
-                    />
-                    </h1>
+                    <div className="inline-block relative">
+                        <h1 className='text-3xl md:text-4xl font-bold mb-4'>
+                            Tech <span className='text-cyan-200'> Stack</span> 
+                        </h1>
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            className="absolute bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+                        />
+                    </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
                         Technologies and tools I use to bring ideas to life and build amazing digital experiences.
                     </p>
