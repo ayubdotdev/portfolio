@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { SiExpress, SiMongodb,SiJavascript, SiTailwindcss, 
     SiTypescript, SiReact,SiNodedotjs,
     SiNextdotjs,
+    SiSupabase,
     } from 'react-icons/si'
 
 
@@ -9,43 +10,37 @@ const SkillsSection = () => {
     const containerVariants = {
         hidden: { opacity: 0 },
         show: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.08,
-                delayChildren: 0.05,
-            },
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.15,
+            delayChildren: 0.3,
+          },
         },
-    };
-
-    const itemVariants = {
-        hidden: { 
-            y: 20, 
-            opacity: 0,
-            filter: "blur(8px)"
-        },
+      };
+    
+      const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
         show: {
-            y: 0,
-            opacity: 1,
-            filter: "blur(0px)",
-            transition: { 
-                duration: 0.4,
-                ease: "easeOut"
-            },
+          y: 0,
+          opacity: 1,
+          transition: { type: "spring", stiffness: 100 },
         },
     };
     const skillsData = [
         { name: "React", icon: SiReact , color: "#61DAFB" },
-        { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
+        { name: "Next.js", icon: SiNextdotjs, color: "var(--nextjs-color)" },
         { name: "Tailwind CSS", icon:SiTailwindcss, color: "#06b6d4" },
         { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
         { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
          { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-        { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
+        { name: "Supabase", icon: SiSupabase, color: "#00FF00" },
         { name: "MongoDB", icon: SiMongodb, color: "#47A248" }
     ];
 
     return (
-        <section id='skill' className='container mx-auto px-6 py-16 md:py-24 '>
+        <section id='skill' className='container mx-auto px-6 py-16 md:py-24 ' style={{
+            '--nextjs-color': 'var(--color-foreground)'
+        } as React.CSSProperties}>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -55,13 +50,13 @@ const SkillsSection = () => {
                 <div className="text-center mb-12">
                     <div className="inline-block relative">
                         <h1 className='text-3xl md:text-4xl font-bold mb-4'>
-                            Tech <span className='text-cyan-200'> Stack</span> 
+                            Tech <span className='text-indigo-400'> Stack</span> 
                         </h1>
                         <motion.div
                             initial={{ scaleX: 0 }}
                             whileInView={{ scaleX: 1 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="absolute bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+                            className="absolute bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-indigo-400 to-teal-400 rounded-full"
                         />
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
