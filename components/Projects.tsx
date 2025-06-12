@@ -113,14 +113,14 @@ const Projects = () => {
                         className="text-4xl md:text-5xl font-bold mb-4 relative inline-block"
                         variants={headingVariants}
                     >
-                        My <span className='text-cyan-300 relative'>
+                        Proof of <span className='text-cyan-300 relative'>
                             Work
                         </span>
                             <motion.div
                                 initial={{ scaleX: 0 }}
                                 whileInView={{ scaleX: 1 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="absolute mt-3 w-54 left-0 h-1 bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-full"
+                                className="absolute mt-1 w-full  left-0 h-1 bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-full"
                             />
                     </motion.h2>
                     <motion.p

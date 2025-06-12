@@ -141,10 +141,8 @@ const Contacts = () => {
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="absolute mt-1 w-70  left-118 h-1 bg-gradient-to-r from-cyan-500 to-indigo-400
-              rounded-full"
+              className="absolute left-1/2 transform -translate-x-1/2 mt-1 h-1 w-2/4 sm:w-1/2 md:w-1/3 lg:w-1/4 bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-full origin-left"
             />
-
           </motion.h2>
 
           <motion.p
@@ -225,7 +223,7 @@ const Contacts = () => {
               <motion.div
                 className="flex space-x-4 "
                 variants={containerVariants}
-          >
+              >
                 {[
                   { href: "https://github.com/ayubdotdev", icon: Github, label: "GitHub" },
                   { href: "https://www.linkedin.com/in/ayub-khan-8b152726a/", icon: Linkedin, label: "LinkedIn" },
