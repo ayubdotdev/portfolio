@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
-import { Globe } from "./magicui/globe";
 import { motion } from "framer-motion";
 
 const Contacts = () => {
@@ -131,40 +130,19 @@ const Contacts = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <motion.div variants={itemVariants}>
-            <h3 className="text-3xl md:text-5xl font-bold dark:text-white text-black mb-6">
-              Open to Connect & Collaborate
-            </h3>
-          </motion.div>
-
-          <motion.p
-            className="text-muted-foreground max-w-2xl mx-auto"
-            variants={itemVariants}
-          >
-            I'm always excited to discuss new opportunities and innovative ideas around the world
-          </motion.p>
-
-          <motion.div
-            className="flex justify-center mb-8"
-            variants={globeVariants}
-          >
-            <div className="relative w-80 h-80 md:w-80 md:h-80">
-              <Globe className="w-full h-full" />
-            </div>
-          </motion.div>
-
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-4"
             variants={itemVariants}
           >
             <span className=" mb-2 dark:text-white text-black">
-              Get In <span className="text-indigo-400"> Touch</span>
+              Get In <span className="text-cyan-300"> Touch</span>
             </span>
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="absolute mt-1 w-70  left-118 h-1 bg-gradient-to-r from-indigo-500 to-teal-400 rounded-full"
+              className="absolute mt-1 w-70  left-118 h-1 bg-gradient-to-r from-cyan-500 to-indigo-400
+              rounded-full"
             />
 
           </motion.h2>
@@ -209,7 +187,7 @@ const Contacts = () => {
                 transition={{ duration: 0.3 }}
               >
                 <motion.div
-                  className="p-3 bg-gradient-to-r from-indigo-600 to-indigo-400 border border-gray-600 rounded-full text-white"
+                  className="p-3 bg-gradient-to-r from-cyan-500 to-indigo-500 border border-gray-600 rounded-full text-white"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -228,7 +206,7 @@ const Contacts = () => {
                 transition={{ duration: 0.3 }}
               >
                 <motion.div
-                  className="p-3 bg-gradient-to-r from-indigo-600 to-indigo-400 border border-gray-600 rounded-full text-white"
+                  className="p-3 bg-gradient-to-r from-cyan-500 to-indigo-400 border border-gray-600 rounded-full text-white"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -247,7 +225,7 @@ const Contacts = () => {
               <motion.div
                 className="flex space-x-4 "
                 variants={containerVariants}
-              >
+          >
                 {[
                   { href: "https://github.com/ayubdotdev", icon: Github, label: "GitHub" },
                   { href: "https://www.linkedin.com/in/ayub-khan-8b152726a/", icon: Linkedin, label: "LinkedIn" },
@@ -256,7 +234,7 @@ const Contacts = () => {
                   <motion.a
                     key={social.label}
                     href={social.href}
-                    className="p-3 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-full transition-all duration-200 border border-gray-600"
+                    className="p-3 bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-full transition-all duration-200 border border-gray-600"
                     variants={itemVariants}
                     whileHover={{
                       scale: 1.10
@@ -380,7 +358,7 @@ const Contacts = () => {
                 disabled={isSubmitting}
                 className={`w-full py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2 ${isSubmitting
                   ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-indigo-600 to-indigo-400 text-white hover:shadow-lg transform hover:scale-105'
+                  : 'bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-400 text-white hover:shadow-lg transform hover:scale-105'
                   }`}
                 variants={itemVariants}
                 whileHover={!isSubmitting ? {

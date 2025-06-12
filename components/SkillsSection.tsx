@@ -50,13 +50,13 @@ const SkillsSection = () => {
                 <div className="text-center mb-12">
                     <div className="inline-block relative">
                         <h1 className='text-3xl md:text-4xl font-bold mb-4'>
-                            Tech <span className='text-indigo-400'> Stack</span> 
+                            Tech <span className='text-cyan-300'> Stack</span> 
                         </h1>
                         <motion.div
                             initial={{ scaleX: 0 }}
                             whileInView={{ scaleX: 1 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="absolute bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-indigo-400 to-teal-400 rounded-full"
+                            className="absolute bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-full"
                         />
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">

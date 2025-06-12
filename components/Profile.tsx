@@ -76,7 +76,7 @@ const ProfileSection = () => {
           >
             <a
               href="#projects"
-              className="bg-indigo-500 hover:bg-indigo-400 text-white px-6 py-3 rounded-lg font-medium transition-all"
+              className="bg-cyan-500 hover:bg-cyan-400 text-white px-6 py-3 rounded-lg font-medium transition-all"
             >
               View My Work
             </a>

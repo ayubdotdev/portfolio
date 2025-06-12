@@ -113,14 +113,14 @@ const Projects = () => {
                         className="text-4xl md:text-5xl font-bold mb-4 relative inline-block"
                         variants={headingVariants}
                     >
-                        My <span className='text-indigo-400 relative'>
+                        My <span className='text-cyan-300 relative'>
                             Work
                         </span>
                             <motion.div
                                 initial={{ scaleX: 0 }}
                                 whileInView={{ scaleX: 1 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="absolute mt-3 w-54 left-0 h-1 bg-gradient-to-r from-indigo-400 to-teal-500 rounded-full"
+                                className="absolute mt-3 w-54 left-0 h-1 bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-full"
                             />
                     </motion.h2>
                     <motion.p
@@ -141,7 +141,7 @@ const Projects = () => {
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.title}
-                            className="group relative bg-card/60 backdrop-blur-sm border-2 border-gray-300 dark:border-border/50 rounded-2xl hover:shadow-lg transition-all duration-500 min-w-[300px]"
+                            className="group relative bg-card/60 backdrop-blur-sm border-2  border-gray-300 dark:border-border/50 rounded-2xl hover:shadow-lg transition-all duration-500 min-w-[300px]"
                             variants={cardVariants}
                             whileHover={{
                                 y: -4,
@@ -212,8 +212,7 @@ const Projects = () => {
                             <div className="p-6 bg-background/30 backdrop-blur-sm">
                                 <div className="flex items-center justify-between mb-3">
                                     <motion.h3
-                                        className="text-indigo-400 text-xl font-semibold transition-colors"
-                                        whileHover={{ color: "#06b6d4" }}
+                                        className="text-cyan-400 text-xl font-semibold transition-colors"
                                         transition={{
                                             duration: 0.3,
                                             ease: [0.25, 0.46, 0.45, 0.94]
@@ -255,7 +254,7 @@ const Projects = () => {
                                 <div className="flex space-x-3">
                                     <motion.a
                                         href={project.liveUrl}
-                                        className="flex-1 bg-gradient-to-r from-indigo-600 to-indigo-400 text-white text-center py-2 rounded-lg font-medium hover:shadow-md hover:bg-accent/75 transition-all duration-300 flex items-center justify-center space-x-1"
+                                        className="flex-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 text-white text-center py-2 rounded-lg font-medium hover:shadow-md hover:bg-accent/75 transition-all duration-300 flex items-center justify-center space-x-1"
                                         whileHover={{
                                             scale: 1.02,
                                             transition: {
