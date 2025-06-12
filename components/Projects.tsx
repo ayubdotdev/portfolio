@@ -5,11 +5,12 @@ import { motion } from 'framer-motion';
 const Projects = () => {
     const projects = [
         {
-            title: 'Developers Tool',
-            image: '/devtools.png',
-            tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', "https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png"],
-            liveUrl: 'https://developers-tool.vercel.app/',
-            githubUrl: 'https://github.com/ayubdotdev/make-fast',
+            title: 'Edu Nova',
+            image: '/edunova.png',
+            tags: [
+                'https://files.buildwithfern.com/https://vapi.docs.buildwithfern.com/2025-06-06T22:21:40.746Z/static/images/logo/logo-dark.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', "https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png", "/supabase.svg", "https://cdn.brandfetch.io/idGrtLvNcI/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1744030757701"],
+            liveUrl: 'https://edu-nova-beta.vercel.app/',
+            githubUrl: 'https://github.com/ayubdotdev/ai-companion',
         },
         {
             title: 'AI Magic',
@@ -26,12 +27,11 @@ const Projects = () => {
             githubUrl: 'https://github.com/ayubdotdev/ikit',
         },
         {
-            title: 'Edu Nova',
-            image: '/edunova.png',
-            tags: [
-                'https://files.buildwithfern.com/https://vapi.docs.buildwithfern.com/2025-06-06T22:21:40.746Z/static/images/logo/logo-dark.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', "https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png", "/supabase.svg", "https://cdn.brandfetch.io/idGrtLvNcI/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1744030757701"],
-            liveUrl: 'https://edu-nova-beta.vercel.app/',
-            githubUrl: 'https://github.com/ayubdotdev/ai-companion',
+            title: 'Developers Tool',
+            image: '/devtools.png',
+            tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', "https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png"],
+            liveUrl: 'https://developers-tool.vercel.app/',
+            githubUrl: 'https://github.com/ayubdotdev/make-fast',
         },
     ];
 
