@@ -75,7 +75,11 @@ const ProfileSection = () => {
             className="flex flex-wrap justify-center md:justify-start gap-4"
           >
             <a
-              href="#projects"
+              href="#Projects"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('Projects')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="bg-cyan-500 hover:bg-cyan-400 text-white px-6 py-3 rounded-lg font-medium transition-all"
             >
               View My Work
