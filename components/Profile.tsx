@@ -40,7 +40,7 @@ const ProfileSection = () => {
           <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg">
             <Avatar className="w-full h-full">
               <AvatarImage
-                src="pp.jpg"
+                src="pfpp.jpeg"
                 alt=" Profile photo"
                 className="object-cover"
               />

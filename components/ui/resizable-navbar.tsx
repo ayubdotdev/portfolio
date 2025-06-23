@@ -237,7 +237,7 @@ export const NavbarLogo = () => {
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <img
-        src="pp.jpg"
+        src="pfpp.jpeg"
         alt="logo"
         width={40}
         height={40}
