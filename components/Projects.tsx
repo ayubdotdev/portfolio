@@ -13,6 +13,15 @@ const Projects = () => {
             githubUrl: 'https://github.com/ayubdotdev/ai-companion',
         },
         {
+            title: 'NexLy',
+            image: '/NexLy.png',
+            tags: ['https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png','https://neon.com/brand/neon-logomark-light-color.svg', "https://cdn.brandfetch.io/idGrtLvNcI/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1744030757701"
+             ,"https://cdn.brandfetch.io/idBBE3_R9e/theme/light/idJ9Tiato-.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+             "https://imgs.search.brave.com/QQmKUWX4OCsAb8IwUK_WphzjHojLDMiq9B7ArgZPGHI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2MyMmE3Y2E0/MTI3ZGRkMmI5OWZk/ZWUxNTZiYTMyZWJl/N2Y3MWYzNzcyZGFj/ZTVhYWI5OTM2NTEz/ZjRjN2FhOC91cGxv/YWR0aGluZy5jb20v"],
+            liveUrl: 'https://nex-lyy.vercel.app/',
+            githubUrl: 'https://github.com/ayubdotdev/NexLy',
+        },
+        {
             title: 'AI Magic',
             image: '/aimagic.png',
             tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', 'https://imgs.search.brave.com/CkOet2vlmw9U1LUr-ZEtqwvYgIdIAVZGzsRa1saYHR0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGIyM2ZiNmM0/Mjg1NjAyNDk3YjY3/MTM4OTQ5YjA2MzQy/M2I0YWU4OTk3ZGJk/MThhYTYzMWZhOWQx/MjMwMjdhMi9zdGFi/aWxpdHkuYWkv'],
@@ -25,13 +34,6 @@ const Projects = () => {
             tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', 'https://icon.icepanel.io/Technology/png-shadow-512/MongoDB.png', 'https://next-auth.js.org/img/logo/logo-xs.png'],
             liveUrl: 'https://vortex-opal-two.vercel.app/',
             githubUrl: 'https://github.com/ayubdotdev/ikit',
-        },
-        {
-            title: 'Developers Tool',
-            image: '/devtools.png',
-            tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', "https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png"],
-            liveUrl: 'https://developers-tool.vercel.app/',
-            githubUrl: 'https://github.com/ayubdotdev/make-fast',
         },
     ];
 
@@ -116,12 +118,12 @@ const Projects = () => {
                         Proof of <span className='text-cyan-300 relative'>
                             Work
                         </span>
-                            <motion.div
-                                initial={{ scaleX: 0 }}
-                                whileInView={{ scaleX: 1 }}
-                                transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="absolute mt-1 w-full  left-0 h-1 bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-full"
-                            />
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            className="absolute mt-1 w-full  left-0 h-1 bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-full"
+                        />
                     </motion.h2>
                     <motion.p
                         className="text-lg mt-1 text-muted-foreground max-w-2xl mx-auto"
@@ -240,10 +242,10 @@ const Projects = () => {
                                                 src={tag}
                                                 alt={tag.split('/').pop()?.split('.')[0] || 'tech icon'}
                                                 className={`w-6 h-6 object-contain ${tag.includes('Next.js')
+                                                    ? 'dark:brightness-0 dark:invert brightness-0'
+                                                    : tag.includes('vapi')
                                                         ? 'dark:brightness-0 dark:invert brightness-0'
-                                                        : tag.includes('vapi')
-                                                            ? 'dark:brightness-0 dark:invert brightness-0'
-                                                            : ''
+                                                        : ''
                                                     }`}
                                             />
                                         </motion.div>

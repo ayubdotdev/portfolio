@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { User } from "lucide-react";
+import { ChevronRight, User } from "lucide-react";
 import TypingAnimation from "./Typing-animation";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import { cn } from "@/lib/utils";
+import { AnimatedGradientText } from "./ui/animated-gradient-text";
 
 const ProfileSection = () => {
   const containerVariants = {
@@ -51,6 +53,7 @@ const ProfileSection = () => {
           </div>
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 to-transparent"></div>
         </motion.div>
+            
 
         <div className="max-w-2xl text-center md:text-left">
           <motion.h2

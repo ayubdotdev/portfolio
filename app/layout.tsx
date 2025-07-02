@@ -41,7 +41,6 @@ export default function RootLayout({
           {children}
           <Analytics />
 
-          <SmoothCursor />
         </ThemeProvider>
       </body>
     </html>

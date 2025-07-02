@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="pt-5 min-h-screen bg-gradient-to-br from-background to-background/90 text-foreground overflow-x-hidden">
       <ParticlesBackground />
-      <Spotlight />
+      <Spotlight  />
       <div className="fixed top-22 right-10 z-[100]">
         <ModeToggle />
       </div>
