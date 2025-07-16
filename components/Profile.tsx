@@ -72,7 +72,7 @@ const ProfileSection = () => {
             variants={itemVariants}
             className="text-lg text-foreground/70 mb-8"
           >
-            I'm a third-year engineering student with a strong passion for web development. I love building websites that improve digital experiences and solve real-world problems       </motion.p>
+            I'm a third-year engineering student with a strong passion for web development.I love building websites and apps</motion.p>
           <motion.div
             variants={itemVariants}
             className="flex flex-wrap justify-center md:justify-start gap-4"
