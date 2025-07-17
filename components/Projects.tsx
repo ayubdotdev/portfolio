@@ -53,11 +53,11 @@ const Projects = () => {
             githubUrl: 'https://github.com/ayubdotdev/make-fast',
         },
         {
-            title: 'Luma Flow',
-            image: '/xpost.png',
+            title: 'Zentro',
+            image: '/flpg.png',
             category: "Landing Pages",
             tags: ['notnull'],
-            liveUrl: 'https://luma-flow.vercel.app/',
+            liveUrl: 'https://zentro-eta.vercel.app/',
             githubUrl: 'https://github.com/ayubdotdev',
         },
         {
@@ -69,11 +69,11 @@ const Projects = () => {
             githubUrl: 'https://github.com/ayubdotdev',
         },
         {
-            title: 'Zentro',
-            image: '/flpg.png',
+            title: 'Luma Flow',
+            image: '/xpost.png',
             category: "Landing Pages",
             tags: ['notnull'],
-            liveUrl: 'https://zentro-eta.vercel.app/',
+            liveUrl: 'https://luma-flow.vercel.app/',
             githubUrl: 'https://github.com/ayubdotdev',
         },
     ];

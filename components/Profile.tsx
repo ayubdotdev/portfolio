@@ -4,7 +4,7 @@ import { ChevronRight, User } from "lucide-react";
 import TypingAnimation from "./Typing-animation";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { cn } from "@/lib/utils";
-import { AnimatedGradientText } from "./ui/animated-gradient-text";
+import { ShimmerButton } from "@/src/components/magicui/shimmer-button";
 
 const ProfileSection = () => {
   const containerVariants = {
@@ -28,13 +28,18 @@ const ProfileSection = () => {
   };
 
   return (
-    <section id='Profile' className="container mx-auto px-6 py-16 md:py-24">
+    <section id='Profile' className="container h-screen mx-auto px-6 py-20">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12"
+        className="flex flex-col items-center text-center gap-8"
       >
+        <ShimmerButton className="shadow-2xl  ">
+          <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+            Available for freelancing Projects          
+            </span>
+        </ShimmerButton>
         <motion.div
           variants={itemVariants}
           className="relative"
@@ -53,9 +58,8 @@ const ProfileSection = () => {
           </div>
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 to-transparent"></div>
         </motion.div>
-            
 
-        <div className="max-w-2xl text-center md:text-left">
+        <div className="max-w-2xl">
           <motion.h2
             variants={itemVariants}
             className="text-4xl md:text-6xl font-bold mb-6"
@@ -72,10 +76,11 @@ const ProfileSection = () => {
             variants={itemVariants}
             className="text-lg text-foreground/70 mb-8"
           >
-            I'm a third-year engineering student with a strong passion for web development.I love building websites and apps</motion.p>
+            I'm a third-year engineering student with a strong passion for web development.Currently looking for internships and remote jobs
+          </motion.p>
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap justify-center md:justify-start gap-4"
+            className="flex flex-wrap justify-center gap-4"
           >
             <a
               href="#Projects"

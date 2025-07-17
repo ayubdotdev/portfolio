@@ -3,6 +3,7 @@ import { SiExpress, SiMongodb,SiJavascript, SiTailwindcss,
     SiTypescript, SiReact,SiNodedotjs,
     SiNextdotjs,
     SiSupabase,
+    SiPostgresql
     } from 'react-icons/si'
 
 
@@ -27,13 +28,13 @@ const SkillsSection = () => {
         },
     };
     const skillsData = [
-        { name: "React", icon: SiReact , color: "#61DAFB" },
-        { name: "Next.js", icon: SiNextdotjs, color: "var(--nextjs-color)" },
         { name: "Tailwind CSS", icon:SiTailwindcss, color: "#06b6d4" },
-        { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
         { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-         { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-        { name: "Supabase", icon: SiSupabase, color: "#00FF00" },
+        { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+        { name: "React", icon: SiReact , color: "#61DAFB" },
+        { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+        { name: "Next.js", icon: SiNextdotjs, color: "var(--nextjs-color)" },
+        { name: "Postgresql", icon: SiPostgresql, color: "#00000" },
         { name: "MongoDB", icon: SiMongodb, color: "#47A248" }
     ];
 
