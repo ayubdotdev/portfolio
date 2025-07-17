@@ -167,7 +167,7 @@ const Contacts = () => {
               <motion.a
                 key={social.label}
                 href={social.href}
-                className="p-2.5 sm:p-3 bg-gradient-to-r from-cyan-500 to-indigo-400 rounded-full transition-all duration-200 border border-gray-600 touch-manipulation"
+                className="p-2.5 sm:p-3 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-full transition-all duration-200 border border-gray-600 touch-manipulation"
                 variants={itemVariants}
                 whileHover={{ scale: 1.10 }}
                 whileTap={{ scale: 0.9 }}

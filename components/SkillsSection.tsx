@@ -77,7 +77,7 @@ const SkillsSection = () => {
                     <motion.div
                         key={index}
                         variants={itemVariants}
-                        className='bg-card/50 rounded-xl backdrop-blur-sm hover:bg-card/80 border border-border flex flex-col group items-center p-6 transition-all relative h-40'
+                        className='bg-card/50 rounded-xl backdrop-blur-sm hover:bg-card/80 border border-border flex flex-col group items-center  p-6 transition-all relative h-40'
                         whileHover={{ y: -5, transition: { duration: 0.2 } }}
                     >
                         <div className="h-24 w-24 flex items-center justify-center mb-3">
