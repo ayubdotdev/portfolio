@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Mail, Send, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 import { ShineBorder } from "@/src/components/magicui/shine-border";
+import Link from "next/link";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -151,7 +152,19 @@ const Contacts = () => {
             className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4"
             variants={itemVariants}
           >
-            Ready to start your next project? Let's create something amazing together.
+            Drop me an email to connect!You can also find me on{" "}
+            <Link
+              href="https://x.com/Ayyubdotdev"
+              className="text-cyan-300 hover:underline  transition"
+            >
+              X (formerly Twitter)
+            </Link>
+           <br /> <Link
+              href="mailto:ayubdotdev@gmail.com"
+              className="text-white-300 font-semibold lg:pr-94 left-20 hover:text-cyan-300 transition"
+            >
+              ayubdotdev@gmail.com
+            </Link>
           </motion.p>
 
           {/* Social Links - responsive spacing and sizing */}
@@ -162,12 +175,12 @@ const Contacts = () => {
             {[
               { href: "https://github.com/ayubdotdev", icon: Github, label: "GitHub" },
               { href: "https://www.linkedin.com/in/ayub-khan-8b152726a/", icon: Linkedin, label: "LinkedIn" },
-              { href: "https://x.com/Ayyubdotdev", img: "/xlogo.png", label: "X" },
+              { href: "https://x.com/Ayyubdotdev", icon: Twitter, label: "X" },
             ].map((social, index) => (
               <motion.a
                 key={social.label}
                 href={social.href}
-                className="p-2.5 sm:p-3 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-full transition-all duration-200 border border-gray-600 touch-manipulation"
+                className="p-2.5 sm:p-3  bg-gradient-to-br from-cyan-300 via-cyan-500 to-cyan-700 border-gray-500  rounded-full transition-all duration-200 border  touch-manipulation"
                 variants={itemVariants}
                 whileHover={{ scale: 1.10 }}
                 whileTap={{ scale: 0.9 }}
@@ -176,15 +189,8 @@ const Contacts = () => {
                 rel="noopener noreferrer"
                 aria-label={social.label}
               >
-                {social.icon ? (
-                  <social.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                ) : (
-                  <img
-                    src={social.img}
-                    alt={social.label}
-                    className="w-5 h-5 sm:w-6 sm:h-6"
-                  />
-                )}
+                {social.icon && <social.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />}
+
               </motion.a>
             ))}
           </motion.div>

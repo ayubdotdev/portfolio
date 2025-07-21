@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ChevronRight, User } from "lucide-react";
+import { User } from "lucide-react";
 import TypingAnimation from "./Typing-animation";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
-import { cn } from "@/lib/utils";
 import { ShimmerButton } from "@/src/components/magicui/shimmer-button";
 
 const ProfileSection = () => {
@@ -28,18 +27,22 @@ const ProfileSection = () => {
   };
 
   return (
-    <section id='Profile' className="container h-screen mx-auto px-6 py-20">
+    <section id='Profile' className="container h-screen mx-auto px-6 py-21">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="show"
         className="flex flex-col items-center text-center gap-8"
       >
-        <ShimmerButton className="shadow-2xl ">
-          <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-            Available for freelancing Projects          
+        <motion.div
+          variants={itemVariants}>
+          <ShimmerButton className="shadow-2xl ">
+            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+              Available for freelance
             </span>
-        </ShimmerButton>
+          </ShimmerButton>
+        </motion.div>
+
         <motion.div
           variants={itemVariants}
           className="relative"
@@ -76,7 +79,7 @@ const ProfileSection = () => {
             variants={itemVariants}
             className="text-lg text-foreground/70 mb-8"
           >
-            I'm a third-year engineering student with a strong passion for web development.Currently looking for internships and remote jobs
+            I'm a 19 year old engineering student with a strong passion for web development.Currently looking for internships and remote jobs
           </motion.p>
           <motion.div
             variants={itemVariants}

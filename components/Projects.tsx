@@ -3,11 +3,7 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
 
 const Projects = () => {
-    const [selectedCategory, setSelectedCategory] = useState("Full Stack")
-    const categories = ['Full Stack', 'Mini Projects', 'Landing Pages']
-
-
-
+    
     const projects = [
         {
             title: 'Edu Nova',
@@ -15,19 +11,19 @@ const Projects = () => {
             category: 'Full Stack',
             tags: [
                 'https://files.buildwithfern.com/https://vapi.docs.buildwithfern.com/2025-06-06T22:21:40.746Z/static/images/logo/logo-dark.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', "https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png", "/supabase.svg", "https://cdn.brandfetch.io/idGrtLvNcI/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1744030757701"],
-            liveUrl: 'https://edu-nova-beta.vercel.app/',
-            githubUrl: 'https://github.com/ayubdotdev/ai-companion',
-        },
-        {
-            title: 'NexLy',
+                liveUrl: 'https://edu-nova-beta.vercel.app/',
+                githubUrl: 'https://github.com/ayubdotdev/ai-companion',
+            },
+            {
+                title: 'NexLy',
             image: '/NexLy.png',
             category: 'Full Stack',
             tags: ['https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', 'https://neon.com/brand/neon-logomark-light-color.svg', "https://cdn.brandfetch.io/idGrtLvNcI/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1744030757701"
                 , "https://cdn.brandfetch.io/idBBE3_R9e/theme/light/idJ9Tiato-.svg?c=1dxbfHSJFAPEGdCLU4o5B",
                 "https://imgs.search.brave.com/QQmKUWX4OCsAb8IwUK_WphzjHojLDMiq9B7ArgZPGHI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2MyMmE3Y2E0/MTI3ZGRkMmI5OWZk/ZWUxNTZiYTMyZWJl/N2Y3MWYzNzcyZGFj/ZTVhYWI5OTM2NTEz/ZjRjN2FhOC91cGxv/YWR0aGluZy5jb20v"],
-            liveUrl: 'https://nex-lyy.vercel.app/',
-            githubUrl: 'https://github.com/ayubdotdev/NexLy',
-        },
+                liveUrl: 'https://nex-lyy.vercel.app/',
+                githubUrl: 'https://github.com/ayubdotdev/NexLy',
+            },
         {
             title: 'Vortex',
             image: '/vorte.png',
@@ -77,6 +73,9 @@ const Projects = () => {
             githubUrl: 'https://github.com/ayubdotdev',
         },
     ];
+    
+    const [selectedCategory, setSelectedCategory] = useState("Full Stack")
+    const categories = ['Full Stack', 'Mini Projects', 'Landing Pages']
     const filteredProjects = projects.filter(project => project.category === selectedCategory)
 
     const containerVariants = {
@@ -204,58 +203,69 @@ const Projects = () => {
 
                 {/* Category Filter */}
                 <motion.div
-                    className="flex flex-wrap justify-center gap-4 mb-12"
+                    className="flex flex-col items-center mb-8"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
                 >
-                    {categories.map((category, index) => (
-                        <motion.button
-                            key={category}
-                            onClick={() => setSelectedCategory(category)}
-                            className={`px-6 py-3 rounded-full font-medium transition-all duration-300 border-2 ${selectedCategory === category
-                                ? ' dark:text-white bg-cyan-500 text-black border-transparent shadow-lg shadow-indigo-500/25'
-                                : 'bg-card/60  backdrop-blur-sm border-border/50 hover:border-cyan-400/50 hover:bg-card/80'
-                                }`}
-                            variants={categoryButtonVariants}
-                            whileHover={{
-                                scale: 1.05,
-                                transition: {
-                                    duration: 0.2,
-                                    ease: [0.25, 0.46, 0.45, 0.94]
-                                }
-                            }}
-                            whileTap={{ scale: 0.95 }}
-                            custom={index}
-                        >
-                            <motion.span
-                                animate={{
-                                    color: selectedCategory === category ? '#ffffff' : undefined
-                                }}
-                                transition={{ duration: 0.2 }}
+                    {/* Categories Container */}
+                    <motion.div
+                        className="bg-card/40 backdrop-blur-sm border border-border/50 rounded-2xl p-6 mb-6"
+                        variants={categoryButtonVariants}
+                        custom={0}
+                    >
+                        <div className="flex flex-wrap justify-center gap-4">
+                            {categories.map((category, index) => (
+                                <motion.button
+                                    key={category}
+                                    onClick={() => setSelectedCategory(category)}
+                                    className={`px-6 py-3 rounded-full font-medium transition-all duration-300 border-2 ${selectedCategory === category
+                                        ? ' dark:text-white bg-cyan-500 text-black border-transparent shadow-lg shadow-indigo-500/25'
+                                        : 'bg-card/60  backdrop-blur-sm border-border/50 hover:border-cyan-400/50 hover:bg-card/80'
+                                        }`}
+                                    variants={categoryButtonVariants}
+                                    whileHover={{
+                                        scale: 1.05,
+                                        transition: {
+                                            duration: 0.2,
+                                            ease: [0.25, 0.46, 0.45, 0.94]
+                                        }
+                                    }}
+                                    whileTap={{ scale: 0.95 }}
+                                    custom={index + 1}
+                                >
+                                    <motion.span
+                                        animate={{
+                                            color: selectedCategory === category ? '#ffffff' : undefined
+                                        }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        {category}
+                                    </motion.span>
+                                </motion.button>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Landing Page Notice */}
+                    <AnimatePresence mode="wait">
+                        {selectedCategory === "Landing Pages" && (
+                            <motion.div
+                                key="landing-note"
+                                className="text-center mb-6"
+                                variants={descriptionVariants}
+                                initial="hidden"
+                                animate="visible"
+                                exit="hidden"
                             >
-                                {category}
-                            </motion.span>
-                        </motion.button>
-                    ))}
-                <AnimatePresence mode="wait">
-                    {selectedCategory === "Landing Pages" && (
-                        <motion.p
-                            key="landing-note"
-                            className="text-center text-sm text-cyan-400 bg-cyan-500/10 border border-cyan-400/30 px-4 py-2 rounded-lg mt-12 inline-block mx-auto"
-                            variants={descriptionVariants}
-                            initial="hidden"
-                            animate="visible"
-                            exit="hidden"
-                        >
-                            We’re really sorry — mobile preview is currently unavailable for landing pages. Please use a desktop to explore the full experience.
-                        </motion.p>
-                    )}
-                </AnimatePresence>
+                                <p className="text-sm text-cyan-400 bg-cyan-500/10 border border-cyan-400/30 px-4 py-2 rounded-lg inline-block">
+                                    Mobile preview is currently unavailable for landing pages. Please use a desktop to explore the full experience.
+                                </p>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                 </motion.div>
-
-
 
 
                 {/* Projects Grid */}
@@ -369,7 +379,7 @@ const Projects = () => {
                                             }}
                                             whileTap={{ scale: 0.98 }}
                                         >
-                                            <span className="mr-2">Live </span>
+                                            <span className="mr-2">Preview </span>
                                             <ExternalLink className="w-4 h-4" />
                                         </motion.a>
                                         {project.category !== "Landing Pages" && (
@@ -385,7 +395,7 @@ const Projects = () => {
                                                 }}
                                                 whileTap={{ scale: 0.98 }}
                                             >
-                                                <span className="mr-2">Code</span>
+                                                <span className="mr-2">Source</span>
                                                 <Github className="w-4 h-4" />
                                             </motion.a>
                                         )}

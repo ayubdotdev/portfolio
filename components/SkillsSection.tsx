@@ -1,11 +1,5 @@
 import { motion } from 'framer-motion'
-import { SiExpress, SiMongodb,SiJavascript, SiTailwindcss, 
-    SiTypescript, SiReact,SiNodedotjs,
-    SiNextdotjs,
-    SiSupabase,
-    SiPostgresql
-    } from 'react-icons/si'
-
+import { Icon } from '@iconify/react'
 
 const SkillsSection = () => {
     const containerVariants = {
@@ -27,15 +21,20 @@ const SkillsSection = () => {
           transition: { type: "spring", stiffness: 100 },
         },
     };
+    
     const skillsData = [
-        { name: "Tailwind CSS", icon:SiTailwindcss, color: "#06b6d4" },
-        { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-        { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-        { name: "React", icon: SiReact , color: "#61DAFB" },
-        { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-        { name: "Next.js", icon: SiNextdotjs, color: "var(--nextjs-color)" },
-        { name: "Postgresql", icon: SiPostgresql, color: "#00000" },
-        { name: "MongoDB", icon: SiMongodb, color: "#47A248" }
+        { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
+        { name: "JavaScript", icon: "logos:javascript" },
+        { name: "Node.js", icon: "logos:nodejs-icon" },
+        { name: "React", icon: "logos:react" },
+        { name: "TypeScript", icon: "logos:typescript-icon" },
+        { name: "Next.js", icon: "logos:nextjs-icon" },
+        { name: "PostgreSQL", icon: "logos:postgresql" },
+        { name: "MongoDB", icon: "logos:mongodb-icon" },
+        { name: "Expo", icon: "logos:expo-icon" },
+        { name: "Supabase", icon: "logos:supabase-icon" },
+        { name: "C++", icon: "logos:c-plusplus" },
+        { name: "Python", icon: "logos:python" },
     ];
 
     return (
@@ -61,7 +60,7 @@ const SkillsSection = () => {
                         />
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-                        Technologies and tools I use to bring ideas to life and build amazing digital experiences.
+                        Technologies and tools I use to build projects and products
                     </p>
                 </div>
             </motion.div>
@@ -81,9 +80,9 @@ const SkillsSection = () => {
                         whileHover={{ y: -5, transition: { duration: 0.2 } }}
                     >
                         <div className="h-24 w-24 flex items-center justify-center mb-3">
-                            <skill.icon
+                            <Icon
+                                icon={skill.icon}
                                 className='w-24 h-24 object-contain filter hover:brightness-110 transition-transform group-hover:scale-110'
-                                style={{ color: skill.color }}
                             />
                         </div>
                         <p className='text-lg font-medium text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>{skill.name}</p>

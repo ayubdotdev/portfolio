@@ -12,7 +12,9 @@ export default function Home() {
   return (
     <div className="pt-5 min-h-screen bg-gradient-to-br from-background to-background/90 text-foreground overflow-x-hidden">
       <ParticlesBackground />
-      <Spotlight  />
+      <div className=" hidden lg:block">
+        <Spotlight />
+      </div>
       <div className="fixed top-22 right-5 lg:right-10 z-[100]">
         <ModeToggle />
       </div>
@@ -22,13 +24,13 @@ export default function Home() {
       <Projects />
       <Contacts />
       <footer className="relative z-10 py-8 border-t border-border">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center text-muted-foreground">
-              <p>&copy; 2025 Khan Ayub. All rights reserved.</p>
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-muted-foreground">
+            <p>&copy; 2025 Khan Ayub. All rights reserved.</p>
           </div>
-        </footer>
-      
+        </div>
+      </footer>
+
     </div>
   )
 }
