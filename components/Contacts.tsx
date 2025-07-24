@@ -152,7 +152,7 @@ const Contacts = () => {
             className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4"
             variants={itemVariants}
           >
-            Drop me an email to connect!You can also find me on{" "}
+            Drop me an email to connect! You can also find me on{" "}
             <Link
               href="https://x.com/Ayyubdotdev"
               className="text-cyan-300 hover:underline  transition"
@@ -161,7 +161,7 @@ const Contacts = () => {
             </Link>
            <br /> <Link
               href="mailto:ayubdotdev@gmail.com"
-              className="text-white-300 font-semibold lg:pr-94 left-20 hover:text-cyan-300 transition"
+              className="text-white-300 font-bold lg:pr-94 left-20 text-cyan-300 transition"
             >
               ayubdotdev@gmail.com
             </Link>

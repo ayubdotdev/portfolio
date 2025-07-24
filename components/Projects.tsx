@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
 
 const Projects = () => {
-    
+
     const projects = [
         {
             title: 'Edu Nova',
@@ -11,19 +11,29 @@ const Projects = () => {
             category: 'Full Stack',
             tags: [
                 'https://files.buildwithfern.com/https://vapi.docs.buildwithfern.com/2025-06-06T22:21:40.746Z/static/images/logo/logo-dark.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', "https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png", "/supabase.svg", "https://cdn.brandfetch.io/idGrtLvNcI/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1744030757701"],
-                liveUrl: 'https://edu-nova-beta.vercel.app/',
-                githubUrl: 'https://github.com/ayubdotdev/ai-companion',
-            },
-            {
-                title: 'NexLy',
+            liveUrl: 'https://edu-nova-beta.vercel.app/',
+            githubUrl: 'https://github.com/ayubdotdev/ai-companion',
+        },
+        {
+            title: 'NexLy',
             image: '/NexLy.png',
             category: 'Full Stack',
             tags: ['https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', 'https://neon.com/brand/neon-logomark-light-color.svg', "https://cdn.brandfetch.io/idGrtLvNcI/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1744030757701"
                 , "https://cdn.brandfetch.io/idBBE3_R9e/theme/light/idJ9Tiato-.svg?c=1dxbfHSJFAPEGdCLU4o5B",
                 "https://imgs.search.brave.com/QQmKUWX4OCsAb8IwUK_WphzjHojLDMiq9B7ArgZPGHI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2MyMmE3Y2E0/MTI3ZGRkMmI5OWZk/ZWUxNTZiYTMyZWJl/N2Y3MWYzNzcyZGFj/ZTVhYWI5OTM2NTEz/ZjRjN2FhOC91cGxv/YWR0aGluZy5jb20v"],
-                liveUrl: 'https://nex-lyy.vercel.app/',
-                githubUrl: 'https://github.com/ayubdotdev/NexLy',
-            },
+            liveUrl: 'https://nex-lyy.vercel.app/',
+            githubUrl: 'https://github.com/ayubdotdev/NexLy',
+        },
+        {
+            title: 'Verisume',
+            image: '/Verisume.png',
+            category: 'Full Stack',
+            tags: ['https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png','https://cdn.worldvectorlogo.com/logos/tailwindcss.svg',"https://www.svgrepo.com/show/354262/react-router.svg",'https://imgs.search.brave.com/q406v17GeYXg3jrDKeqfTUYzCDrqkYsRqbdzCU0__FU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTgxYmZhZDA5/ZWI4ODE3MDdlZWRj/MTZkZWEwYzk4MTM4/NjZjYzcwYmQ3MmEw/OTNmYTg3MDEyMzc0/YTcxMzkzOC9wdXRl/ci5jb20v',"https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png",
+                
+            ],
+            liveUrl: 'https://verisume.vercel.app/',
+            githubUrl: 'https://github.com/ayubdotdev/Verisume',
+        },
         {
             title: 'Vortex',
             image: '/vorte.png',
@@ -73,7 +83,7 @@ const Projects = () => {
             githubUrl: 'https://github.com/ayubdotdev',
         },
     ];
-    
+
     const [selectedCategory, setSelectedCategory] = useState("Full Stack")
     const categories = ['Full Stack', 'Mini Projects', 'Landing Pages']
     const filteredProjects = projects.filter(project => project.category === selectedCategory)

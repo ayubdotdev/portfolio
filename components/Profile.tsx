@@ -96,8 +96,8 @@ const ProfileSection = () => {
               View My Work
             </a>
             <a
-              href="/Ayyubresume.pdf"
-              download="Ayyubresume.pdf"
+              href="/Ayubbresume.pdf"
+              download="Ayubbresume.pdf"
               className="no-underline"
             >
               <InteractiveHoverButton className="px-6 py-3 rounded-lg font-medium transition-all">
