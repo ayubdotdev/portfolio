@@ -2,11 +2,11 @@
 import { NavbarDemo } from "@/components/NavbarDemo";
 import ProfileSection from "../components/Profile";
 import ParticlesBackground from "@/components/ParticlesBackground";
-import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import SkillsSection from "@/components/SkillsSection";
 import Projects from "@/components/Projects";
 import Contacts from "@/components/Contacts";
+import ThemeToggleButton from "@/src/components/ui/theme-toggle-button";
 
 export default function Home() {
   return (
@@ -15,8 +15,8 @@ export default function Home() {
       <div className=" hidden lg:block">
         <Spotlight />
       </div>
-      <div className="fixed top-22 right-5 lg:right-10 z-[100]">
-        <ModeToggle />
+      <div className="fixed top-22 right-5 lg:right-10 z-[100] border dark:border-gray rounded-full">
+      <ThemeToggleButton  variant="circle-blur" start="top-right" />
       </div>
       <NavbarDemo />
       <ProfileSection />
