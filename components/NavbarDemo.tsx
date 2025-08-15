@@ -13,6 +13,7 @@ import {
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import React from "react";
+import ThemeToggleButton from "./ui/theme-toggle-button";
 
 export function NavbarDemo() {
   const navItems = [
@@ -26,28 +27,26 @@ export function NavbarDemo() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" });
     setIsMobileMenuOpen(false);
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0, }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-transparent ${
-        scrolled ? "" : "border-b border-gray-200 dark:border-gray-800"
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "bg-tansparent"
+          : "bg-transparent border-b border-gray-200 dark:border-gray-800"
       }`}
     >
       <Navbar>
@@ -64,16 +63,20 @@ export function NavbarDemo() {
               if (href) scrollToSection(href);
             }}
           />
-        </NavBody>
+      <ThemeToggleButton variant="circle-blur" start="top-right" />
+      </NavBody>
 
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
+            <div className="flex items-center gap-2">
+              <ThemeToggleButton /> {/* 👈 Before hamburger */}
+              <MobileNavToggle
+                isOpen={isMobileMenuOpen}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              />
+            </div>
           </MobileNavHeader>
 
           <MobileNavMenu

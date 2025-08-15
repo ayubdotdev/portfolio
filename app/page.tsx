@@ -16,9 +16,7 @@ export default function Home() {
       <div className=" hidden relative scrollbar-hide  lg:block">
         <Spotlight />
       </div>
-      <div className="fixed top-22 right-5 lg:right-10 z-[100] border dark:border-gray rounded-full">
-      <ThemeToggleButton variant="circle-blur" start="top-right" />
-      </div>
+      
       <NavbarDemo />
       <ProfileSection />
       <SkillsSection />
