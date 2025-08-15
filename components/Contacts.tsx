@@ -174,7 +174,7 @@ const Contacts = () => {
           >
             {[
               { href: "https://github.com/ayubdotdev", icon: Github, label: "GitHub" },
-              { href: "https://www.linkedin.com/in/ayub-khan-8b152726a/", icon: Linkedin, label: "LinkedIn" },
+              { href: "https://www.linkedin.com/in/ayubdotdev/", icon: Linkedin, label: "LinkedIn" },
               { href: "https://x.com/Ayyubdotdev", icon: Twitter, label: "X" },
             ].map((social, index) => (
               <motion.a

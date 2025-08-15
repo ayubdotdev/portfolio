@@ -35,12 +35,12 @@ const Projects = () => {
             githubUrl: 'https://github.com/ayubdotdev/Verisume',
         },
         {
-            title: 'Vortex',
-            image: '/vorte.png',
+            title: 'VeilMotion',
+            image: '/vm.png',
             category: 'Full Stack',
-            tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', 'https://icon.icepanel.io/Technology/png-shadow-512/MongoDB.png', 'https://next-auth.js.org/img/logo/logo-xs.png'],
-            liveUrl: 'https://vortex-opal-two.vercel.app/',
-            githubUrl: 'https://github.com/ayubdotdev/ikit',
+            tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png','https://framerusercontent.com/images/FwGRzdHhlF5dVX3w3adwXRyFz7U.svg',"https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png"],
+            liveUrl: 'https://veilmotion.ayubb.me/',
+            githubUrl: 'https://github.com/ayubdotdev/Veilmotion',
         },
         {
             title: 'AI Magic',

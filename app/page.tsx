@@ -1,3 +1,4 @@
+
 'use client'
 import { NavbarDemo } from "@/components/NavbarDemo";
 import ProfileSection from "../components/Profile";
@@ -12,7 +13,7 @@ export default function Home() {
   return (
     <div className="pt-5 min-h-screen bg-gradient-to-br from-background to-background/90 text-foreground overflow-x-hidden">
       <ParticlesBackground />
-      <div className=" hidden lg:block">
+      <div className=" hidden relative scrollbar-hide  lg:block">
         <Spotlight />
       </div>
       <div className="fixed top-22 right-5 lg:right-10 z-[100] border dark:border-gray rounded-full">
