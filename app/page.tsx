@@ -12,11 +12,13 @@ import ThemeToggleButton from "@/components/ui/theme-toggle-button";
 export default function Home() {
   return (
     <div className="pt-5 min-h-screen bg-gradient-to-br from-background to-background/90 text-foreground overflow-x-hidden">
-      <ParticlesBackground />
-      <div className=" hidden relative scrollbar-hide  lg:block">
+      <div className="hidden lg:block">
+        <ParticlesBackground />
+      </div>      
+      <div className=" hidden  scrollbar-hide  lg:block">
         <Spotlight />
       </div>
-      
+
       <NavbarDemo />
       <ProfileSection />
       <SkillsSection />
