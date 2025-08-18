@@ -379,16 +379,8 @@ const Projects = () => {
                                     <div className="flex space-x-3">
                                         <motion.a
                                             href={project.liveUrl}
-                                            className="flex-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 text-white text-center py-2 rounded-lg font-medium hover:shadow-md hover:bg-accent/75 transition-all duration-300 flex items-center justify-center space-x-1"
-                                            whileHover={{
-                                                scale: 1.02,
-                                                transition: {
-                                                    duration: 0.3,
-                                                    ease: [0.25, 0.46, 0.45, 0.94]
-                                                }
-                                            }}
-                                            whileTap={{ scale: 0.98 }}
-                                        >
+                                            className="flex-1  bg-cyan-500 text-white text-center py-2 rounded-lg font-medium  transition-all duration-300 flex items-center justify-center space-x-1"
+                                                                                  >
                                             <span className="mr-2">Preview </span>
                                             <ExternalLink className="w-4 h-4" />
                                         </motion.a>
