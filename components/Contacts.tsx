@@ -5,6 +5,34 @@ import { motion } from "framer-motion";
 import { ShineBorder } from "@/src/components/magicui/shine-border";
 import Link from "next/link";
 
+const Peerlist = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="-0.5 -0.5 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    height="16"
+    width="16"
+    className={className}   // ✅ allow external className
+  >
+    <path
+      d="M5.234 0.98375h4.532c2.2135625 0 4.073125 1.6644375 4.3175625 3.8644374999999997l0.15256250000000002 1.3725c0.0945 0.8502500000000001 0.0945 1.708375 0 2.558625l-0.15256250000000002 1.3725c-0.2444375 2.2000625 -2.104 3.8644374999999997 -4.3175625 3.8644374999999997H5.234c-2.213625 0 -4.0731875 -1.664375 -4.317625 -3.8644374999999997l-0.1525 -1.3725c-0.09443750000000001 -0.8502500000000001 -0.09443750000000001 -1.708375 0 -2.558625l0.1525 -1.3725c0.2444375 -2.2 2.104 -3.8644374999999997 4.317625 -3.8644374999999997Z"
+      stroke="currentColor"   // ✅ matches theme (instead of hard black)
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1"
+    />
+    <path
+      d="M5.327937499999999 11.120125000000002v-2.896125m0 0V3.8798749999999997h2.8960625c1.199625 0 2.172125 0.9724375000000001 2.172125 2.1720625h0c0 1.199625 -0.9724375000000001 2.1720625 -2.172125 2.1720625H5.327937499999999Z"
+      stroke="currentColor"   // ✅ inherits parent color
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1"
+    />
+  </svg>
+);
+
+
+
 const Contacts = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -159,7 +187,7 @@ const Contacts = () => {
             >
               X (formerly Twitter)
             </Link>
-           <br /> <Link
+            <br /> <Link
               href="mailto:ayubdotdev@gmail.com"
               className="text-white-300 font-bold lg:pr-94 left-20 text-cyan-300 transition"
             >
@@ -176,6 +204,7 @@ const Contacts = () => {
               { href: "https://github.com/ayubdotdev", icon: Github, label: "GitHub" },
               { href: "https://www.linkedin.com/in/ayubdotdev/", icon: Linkedin, label: "LinkedIn" },
               { href: "https://x.com/Ayyubdotdev", icon: Twitter, label: "X" },
+              { href: "https://peerlist.io/ayubdotdev", icon: Peerlist, label: "Peerlist" },
             ].map((social, index) => (
               <motion.a
                 key={social.label}
@@ -292,7 +321,7 @@ const Contacts = () => {
                     disabled={isSubmitting}
                     className={`w-full py-2.5 sm:py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-200 text-sm sm:text-base touch-manipulation ${isSubmitting
                       ? 'bg-gray-400 cursor-not-allowed'
-                      : 'bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-400 text-white hover:shadow-lg transform hover:scale-105 active:scale-95'
+                      : 'bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-300 text-white hover:shadow-lg transform hover:scale-105 active:scale-95'
                       }`}
                     variants={itemVariants}
                     whileTap={!isSubmitting ? { scale: 0.95 } : {}}
