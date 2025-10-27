@@ -19,7 +19,7 @@ const SkillsSection = () => {
         show: {
           y: 0,
           opacity: 1,
-          transition: { type: "spring", stiffness: 100 },
+          transition: { type: "spring", stiffness: 100 } as const,
         },
     };
     
@@ -28,14 +28,10 @@ const SkillsSection = () => {
         { name: "JavaScript", icon: "logos:javascript" },
         { name: "Node.js", icon: "logos:nodejs-icon" },
         { name: "React", icon: "logos:react" },
-        { name: "React Router", icon: "logos:react-router" },
         { name: "TypeScript", icon: "logos:typescript-icon" },
         { name: "Next.js", icon: "logos:nextjs-icon" },
-        { name: "PostgreSQL", icon: "logos:postgresql" },
         { name: "MongoDB", icon: "logos:mongodb-icon" },
         { name: "Supabase", icon: "logos:supabase-icon" },
-        { name: "C++", icon: "logos:c-plusplus" },
-        { name: "Python", icon: "logos:python" },
     ];
 
     return (

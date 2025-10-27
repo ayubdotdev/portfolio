@@ -198,7 +198,7 @@ export const createAnimation = (
       }
       ::view-transition-old(root),
       .dark::view-transition-old(root) {
-        animation: scale-${start} 1s;
+        animation: none; /* CHANGED THIS: was scale-${start} 1s */
         transform-origin: ${transformOrigin};
         z-index: -1;
       }

@@ -14,10 +14,12 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import React from "react";
 import ThemeToggleButton from "./ui/theme-toggle-button";
+ 
 
 export function NavbarDemo() {
   const navItems = [
     { name: "Profile", link: "#Profile" },
+    { name: "Experience", link: "#experience" },
     { name: "Skills", link: "#skill" },
     { name: "Projects", link: "#Projects" },
     { name: "Contacts", link: "#contacts" },
@@ -63,15 +65,16 @@ export function NavbarDemo() {
               if (href) scrollToSection(href);
             }}
           />
-      <ThemeToggleButton variant="circle-blur" start="top-right" />
-      </NavBody>
+          {/* 👇 I removed the 'variant' and 'start' props here */}
+          <ThemeToggleButton />
+        </NavBody>
 
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
             <div className="flex items-center gap-2">
-              <ThemeToggleButton /> {/* 👈 Before hamburger */}
+              <ThemeToggleButton /> {/* 👈 This one was already correct */}
               <MobileNavToggle
                 isOpen={isMobileMenuOpen}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

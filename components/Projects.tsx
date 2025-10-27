@@ -6,8 +6,16 @@ const Projects = () => {
 
     const projects = [
         {
+            title: 'VeilMotion',
+            image: '/vmf.png',
+            category: 'Full Stack',
+            tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png','https://framerusercontent.com/images/FwGRzdHhlF5dVX3w3adwXRyFz7U.svg',"https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png"],
+            liveUrl: 'https://veilmotion.ayubb.me/',
+            githubUrl: 'https://github.com/ayubdotdev/Veilmotion',
+        },
+        {
             title: 'Edu Nova',
-            image: '/edunova.png',
+            image: '/ef.png',
             category: 'Full Stack',
             tags: [
                 'https://files.buildwithfern.com/https://vapi.docs.buildwithfern.com/2025-06-06T22:21:40.746Z/static/images/logo/logo-dark.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', "https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png", "/supabase.svg", "https://cdn.brandfetch.io/idGrtLvNcI/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1744030757701"],
@@ -16,7 +24,7 @@ const Projects = () => {
         },
         {
             title: 'NexLy',
-            image: '/NexLy.png',
+            image: '/nf.png',
             category: 'Full Stack',
             tags: ['https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', 'https://neon.com/brand/neon-logomark-light-color.svg', "https://cdn.brandfetch.io/idGrtLvNcI/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1744030757701"
                 , "https://cdn.brandfetch.io/idBBE3_R9e/theme/light/idJ9Tiato-.svg?c=1dxbfHSJFAPEGdCLU4o5B",
@@ -26,7 +34,7 @@ const Projects = () => {
         },
         {
             title: 'Verisume',
-            image: '/Verisume.png',
+            image: '/rf.png',
             category: 'Full Stack',
             tags: ['https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png','https://cdn.worldvectorlogo.com/logos/tailwindcss.svg',"https://www.svgrepo.com/show/354262/react-router.svg",'https://imgs.search.brave.com/q406v17GeYXg3jrDKeqfTUYzCDrqkYsRqbdzCU0__FU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTgxYmZhZDA5/ZWI4ODE3MDdlZWRj/MTZkZWEwYzk4MTM4/NjZjYzcwYmQ3MmEw/OTNmYTg3MDEyMzc0/YTcxMzkzOC9wdXRl/ci5jb20v',"https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png",
                 
@@ -35,16 +43,8 @@ const Projects = () => {
             githubUrl: 'https://github.com/ayubdotdev/Verisume',
         },
         {
-            title: 'VeilMotion',
-            image: '/vm.png',
-            category: 'Full Stack',
-            tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png','https://framerusercontent.com/images/FwGRzdHhlF5dVX3w3adwXRyFz7U.svg',"https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png"],
-            liveUrl: 'https://veilmotion.ayubb.me/',
-            githubUrl: 'https://github.com/ayubdotdev/Veilmotion',
-        },
-        {
             title: 'AI Magic',
-            image: '/aimagic.png',
+            image: '/amf.png',
             category: 'Mini Projects',
             tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', 'https://imgs.search.brave.com/CkOet2vlmw9U1LUr-ZEtqwvYgIdIAVZGzsRa1saYHR0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGIyM2ZiNmM0/Mjg1NjAyNDk3YjY3/MTM4OTQ5YjA2MzQy/M2I0YWU4OTk3ZGJk/MThhYTYzMWZhOWQx/MjMwMjdhMi9zdGFi/aWxpdHkuYWkv'],
             liveUrl: 'https://ai-magic.vercel.app/',
@@ -52,7 +52,7 @@ const Projects = () => {
         },
         {
             title: 'Developers Tool',
-            image: '/devtools.png',
+            image: '/dff.png',
             category: 'Mini Projects',
             tags: ['https://cdn.worldvectorlogo.com/logos/tailwindcss.svg', 'https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png', 'https://styles.redditmedia.com/t5_2v6gg/styles/communityIcon_4w7vh6c21f871.png'],
             liveUrl: 'https://developers-tool.vercel.app/',
@@ -60,7 +60,7 @@ const Projects = () => {
         },
         {
             title: 'Zentro',
-            image: '/flpg.png',
+            image: '/zf.png',
             category: "Landing Pages",
             tags: ['notnull'],
             liveUrl: 'https://zentro-eta.vercel.app/',
@@ -68,7 +68,7 @@ const Projects = () => {
         },
         {
             title: 'Taskora',
-            image: '/2ndlp1.png',
+            image: '/tf.png',
             category: "Landing Pages",
             tags: ['notnull'],
             liveUrl: 'https://taskora-psi.vercel.app/',
@@ -76,7 +76,7 @@ const Projects = () => {
         },
         {
             title: 'Luma Flow',
-            image: '/xpost.png',
+            image: '/lf.png',
             category: "Landing Pages",
             tags: ['notnull'],
             liveUrl: 'https://luma-flow.vercel.app/',
@@ -113,7 +113,7 @@ const Projects = () => {
             filter: "blur(0px)",
             transition: {
                 duration: 0.6,
-                ease: [0.25, 0.46, 0.45, 0.94]
+                ease: [0.25, 0.46, 0.45, 0.94] as const
             }
         },
         exit: {
@@ -123,7 +123,7 @@ const Projects = () => {
             filter: "blur(10px)",
             transition: {
                 duration: 0.4,
-                ease: [0.25, 0.46, 0.45, 0.94]
+                ease: [0.25, 0.46, 0.45, 0.94] as const
             }
         }
     };
@@ -140,7 +140,7 @@ const Projects = () => {
             filter: "blur(0px)",
             transition: {
                 duration: 0.5,
-                ease: "easeOut"
+                ease: "easeOut" as const
             }
         }
     };
@@ -158,7 +158,7 @@ const Projects = () => {
             transition: {
                 duration: 0.5,
                 delay: 0.1,
-                ease: "easeOut"
+                ease: "easeOut" as const
             }
         }
     };
@@ -175,7 +175,7 @@ const Projects = () => {
             filter: "blur(0px)",
             transition: {
                 duration: 0.4,
-                ease: "easeOut"
+                ease: "easeOut" as const
             }
         }
     };
@@ -232,7 +232,7 @@ const Projects = () => {
                                     onClick={() => setSelectedCategory(category)}
                                     className={`px-6 py-3 rounded-full font-medium transition-all duration-300 border-2 ${selectedCategory === category
                                         ? ' dark:text-white bg-cyan-500 text-black border-transparent shadow-lg shadow-indigo-500/25'
-                                        : 'bg-card/60  backdrop-blur-sm border-border/50 hover:border-cyan-400/50 hover:bg-card/80'
+                                        : 'bg-accent/50  backdrop-blur-sm border-border/50 hover:border-cyan-400/50 hover:bg-accent/80' // <-- THIS LINE IS CHANGED
                                         }`}
                                     variants={categoryButtonVariants}
                                     whileHover={{
@@ -257,24 +257,6 @@ const Projects = () => {
                             ))}
                         </div>
                     </motion.div>
-
-                    {/* Landing Page Notice */}
-                    <AnimatePresence mode="wait">
-                        {selectedCategory === "Landing Pages" && (
-                            <motion.div
-                                key="landing-note"
-                                className="text-center mb-6"
-                                variants={descriptionVariants}
-                                initial="hidden"
-                                animate="visible"
-                                exit="hidden"
-                            >
-                                <p className="text-sm text-cyan-400 bg-cyan-500/10 border border-cyan-400/30 px-4 py-2 rounded-lg inline-block">
-                                    Mobile preview is currently unavailable for landing pages. Please use a desktop to explore the full experience.
-                                </p>
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
                 </motion.div>
 
 

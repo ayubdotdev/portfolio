@@ -111,7 +111,7 @@ const Contacts = () => {
       filter: "blur(0px)",
       transition: {
         duration: 0.3,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };
