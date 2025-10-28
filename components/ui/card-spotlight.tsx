@@ -7,7 +7,7 @@ import { CanvasRevealEffect } from "./canvas-reveal-effect";
 
 export const CardSpotlight = ({
   children,
-  radius = 750,
+  radius = 1000,
   color = "#262626",
   className,
   ...props

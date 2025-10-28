@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { cn } from "@/lib/utils";
 import { CardSpotlight } from "./ui/card-spotlight";
+import { ShineBorder } from "@/src/components/magicui/shine-border";
 
 interface Technology {
   name: string;
@@ -14,12 +15,12 @@ interface Technology {
 interface ExperienceData {
   role: string;
   company: string;
-  isBlur?: boolean; // To control blurring
-  isCurrent?: boolean; // Use boolean for current status
-  website?: string; // Optional link
-  linkedin?: string; // Optional link
-  github?: string; // Optional link
-  x?: string; // Optional link (formerly Twitter)
+  isBlur?: boolean;
+  isCurrent?: boolean;
+  website?: string;
+  linkedin?: string;
+  github?: string;
+  x?: string;
   companyLogo?: string;
   duration: string;
   location: string;
@@ -47,7 +48,6 @@ const Experience = () => {
     },
   };
 
-  // Updated data structure based on reference
   const experienceData: ExperienceData[] = [
     {
       role: "Frontend Role",
@@ -102,10 +102,7 @@ const Experience = () => {
         <div className="relative inline-block">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             Featured{" "}
-            <span className="text-cyan-600 dark:text-cyan-300">
-              {" "}
-              Experience
-            </span>
+            <span className="text-cyan-600 dark:text-cyan-300">Experience</span>
           </h1>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -116,7 +113,7 @@ const Experience = () => {
         </div>
       </motion.div>
 
-      {/* Experience Card */}
+      {/* Experience Cards */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -126,95 +123,97 @@ const Experience = () => {
       >
         {experienceData.map((experience, index) => (
           <motion.div key={index} variants={itemVariants}>
-            <CardSpotlight className="bg-white  dark:bg-black p-6 sm:p-8">
-              <div className="relative  z-10">
-                {/* Working / Role / Duration */}
-                <div className="flex justify-between items-start gap-2 mb-6 flex-wrap">
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-800 dark:text-white">
-                      {experience.role}
-                    </h3>
+            <div className="relative rounded-2xl overflow-hidden group">
+              <CardSpotlight className="relative z-10 bg-white dark:bg-black p-6 sm:p-8 rounded-2xl">
+                <div className="relative z-20">
+                  {/* Role / Company / Duration */}
+                  <div className="flex justify-between items-start gap-2 mb-6 flex-wrap">
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+                        {experience.role}
+                      </h3>
 
-                    <p
-                      className={cn(
-                        "text-md font-semibold text-cyan-600 dark:text-white",
-                        experience.isBlur
-                          ? "blur-[5px] select-none pointer-events-none"
-                          : ""
-                      )}
-                    >
-                      {experience.company}
-                    </p>
-                  </div>
-
-                  {/* Duration always opposite the role */}
-                  <div className="text-sm text-black dark:text-white flex-shrink-0">
-                    {experience.duration}
-                  </div>
-                </div>
-
-                {/* Technologies */}
-                <div>
-                  <h4 className="text-md font-semibold text-cyan-600 dark:text-cyan-300 mb-3">
-                    Technologies & Tools
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {experience.technologies.map((tech) => (
-                      <a
-                        key={tech.name}
-                        href={tech.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <p
                         className={cn(
-                          "flex items-center gap-1 bg-gray-100 dark:bg-black border border-gray-200 dark:border-gray-700",
-                          "px-3 py-1 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300",
-                          "transition-all duration-200 ease-in-out"
+                          "text-md font-semibold text-cyan-600 dark:text-white",
+                          experience.isBlur
+                            ? "blur-[5px] select-none pointer-events-none"
+                            : ""
                         )}
                       >
-                        <Icon icon={tech.icon} className="h-4 w-4" />
-                        {tech.name}
-                      </a>
-                    ))}
+                        {experience.company}
+                      </p>
+                    </div>
+
+                    <div className="text-sm text-black dark:text-white flex-shrink-0">
+                      {experience.duration}
+                    </div>
+                  </div>
+
+                  {/* Technologies */}
+                  <div>
+                    <h4 className="text-md font-semibold text-cyan-600 dark:text-cyan-300 mb-3">
+                      Technologies & Tools
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {experience.technologies.map((tech) => (
+                        <a
+                          key={tech.name}
+                          href={tech.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={cn(
+                            "flex items-center gap-1 bg-gray-100 dark:bg-black border border-gray-200 dark:border-gray-700",
+                            "px-3 py-1 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300",
+                            "transition-all duration-200 ease-in-out"
+                          )}
+                        >
+                          <Icon icon={tech.icon} className="h-4 w-4" />
+                          {tech.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Highlights */}
+                  <div className="text-gray-700 dark:text-foreground/80 mt-6 space-y-3">
+                    <p className="flex items-start gap-2">
+                      <span className="text-cyan-600 dark:text-cyan-400 text-lg leading-6">
+                        •
+                      </span>
+                      <span className="dark:text-white text-black">
+                        Architected and developed the complete frontend
+                        infrastructure for the platform — a comprehensive
+                        solution for creating and managing promotional
+                        campaigns.
+                      </span>
+                    </p>
+
+                    <p className="flex items-start gap-2">
+                      <span className="text-cyan-600 dark:text-cyan-400 text-lg leading-6">
+                        •
+                      </span>
+                      <span className="dark:text-white text-black">
+                        Led a complete codebase refactor improving
+                        maintainability, scalability, and developer velocity
+                        across the platform.
+                      </span>
+                    </p>
+
+                    <p className="flex items-start gap-2">
+                      <span className="text-cyan-600 dark:text-cyan-400 text-lg leading-6">
+                        •
+                      </span>
+                      <span className="dark:text-white text-black">
+                        Integrated and optimized backend API connections,
+                        implementing efficient data fetching and robust error
+                        handling strategies.
+                      </span>
+                    </p>
                   </div>
                 </div>
-
-                {/* Highlights */}
-                <div className="text-gray-700 dark:text-foreground/80 mt-6 space-y-3">
-                  <p className="flex items-start gap-2">
-                    <span className="text-cyan-600 dark:text-cyan-400 text-lg leading-6">
-                      •
-                    </span>
-                    <span className="dark:text-white text-black ">
-                      Architected and developed the complete frontend
-                      infrastructure for the platform — a comprehensive solution
-                      for creating and managing promotional campaigns.
-                    </span>
-                  </p>
-
-                  <p className="flex items-start gap-2">
-                    <span className="text-cyan-600 dark:text-cyan-400 text-lg leading-6">
-                      •
-                    </span>
-                    <span className="dark:text-white text-black">
-                      Led a complete codebase refactor improving{" "}
-                      maintainability, scalability, and developer velocity
-                      across the platform.
-                    </span>
-                  </p>
-
-                  <p className="flex items-start gap-2">
-                    <span className="text-cyan-600 dark:text-cyan-400 text-lg leading-6">
-                      •
-                    </span>
-                    <span className="dark:text-white text-black">
-                      Integrated and optimized backend API connections
-                      implementing efficient data fetching and robust error
-                      handling strategies.
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </CardSpotlight>
+              </CardSpotlight>
+            </div>
           </motion.div>
         ))}
       </motion.div>

@@ -276,20 +276,21 @@ const Projects = () => {
                     >
                         {filteredProjects.map((project, index) => (
                             <motion.div
-                                key={`${project.title}-${selectedCategory}`}
-                                layout
-                                layoutId={project.title}
-                                className="group relative bg-card/60 backdrop-blur-sm border-2 border-gray-300 dark:border-border/50 rounded-2xl hover:shadow-lg transition-all duration-500 min-w-[300px]"
-                                variants={cardVariants}
-                                whileHover={{
-                                    y: -4,
-                                    transition: {
-                                        duration: 0.4,
-                                        ease: [0.25, 0.46, 0.45, 0.94]
-                                    }
-                                }}
-                                whileTap={{ scale: 0.99 }}
-                            >
+  key={`${project.title}-${selectedCategory}`}
+  layout
+  layoutId={project.title}
+  className="group relative bg-card/60 backdrop-blur-sm border-2 border-gray-300 dark:border-border/50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-500 min-w-[300px]"
+  variants={cardVariants}
+  whileHover={{
+    y: -4,
+    transition: {
+      duration: 0.4,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  }}
+  whileTap={{ scale: 0.99 }}
+>
+
                                 {/* Project Image */}
                                 <div className="relative top-0 overflow-hidden bg-gradient-to-b from-transparent to-background/20 aspect-w-4 aspect-h-3 rounded-t-2xl">
                                     <motion.img

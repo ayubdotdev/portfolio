@@ -19,8 +19,8 @@ import ThemeToggleButton from "./ui/theme-toggle-button";
 export function NavbarDemo() {
   const navItems = [
     { name: "Profile", link: "#Profile" },
-    { name: "Experience", link: "#experience" },
     { name: "Skills", link: "#skill" },
+    { name: "Experience", link: "#experience" },
     { name: "Projects", link: "#Projects" },
     { name: "Contacts", link: "#contacts" },
   ];
