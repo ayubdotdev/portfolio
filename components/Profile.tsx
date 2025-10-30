@@ -96,7 +96,7 @@ const ProfileSection = () => {
               View My Work
             </a>
             <a
-              href="/Ayubbresume.pdf"
+              href="/eresume.pdf"
               download="Ayubbresume.pdf"
               className="no-underline"
             >
