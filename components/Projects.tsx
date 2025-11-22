@@ -248,7 +248,7 @@ const Projects: React.FC = () => {
 
                   {/* Show description only for non-landing pages, increase size and clamp to 3 lines */}
                   {project.category !== "Landing Pages" && project.description && (
-                    <p className="text-base mb-4 line-clamp-3 text-muted-foreground">
+                    <p className="text-base mb-4  text-muted-foreground">
                       {project.description}
                     </p>
                   )}
